@@ -10,9 +10,6 @@ _yarn_run_completions() {
   fi
 }
 
-# Associate the custom function with yarn run
-compdef _yarn_run_completions='yarn run'
-
 # Custom completion for yarn (including both built-in commands and package.json scripts)
 _yarn_completions() {
   # Get built-in yarn commands
@@ -39,4 +36,5 @@ _yarn_completions() {
 }
 
 # Associate the custom completion with bare yarn
-compdef _yarn_completions='yarn'
+compdef _yarn_completions yarn
+compdef _yarn_run_completions='yarn run'
